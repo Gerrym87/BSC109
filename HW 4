@@ -1,0 +1,95 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOF0jovpK03JnrbTwmLIR7c",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Gerrym87/BSC109/blob/main/HW%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 246
+        },
+        "id": "9iiOBue0I9gb",
+        "outputId": "86cb8c62-a4b4-4bf2-c3aa-6bdc25c788c8"
+      },
+      "source": [
+        "def main():\n",
+        "  quantity = int(input('enter the amount of packages purchased:'))\n",
+        "  reg = 99.00\n",
+        "  if quantity <= 9 and quantity >= 1:\n",
+        "    print('no discount.')\n",
+        "    discount=1.0\n",
+        "  elif quantity <= 19 and quantity >= 10:\n",
+        "    print('your discount is 10%.')\n",
+        "    discount=.1\n",
+        "  elif quantity <= 49 and quantity >= 20:\n",
+        "    print('your discount is 20%.')\n",
+        "    discount=.2\n",
+        "  elif quantity <= 99 and quantity >= 50:\n",
+        "    print('your discount is 30%.')\n",
+        "    discount=0.3\n",
+        "  else:\n",
+        "    print('your discount is 40%.')\n",
+        "    discount=0.4\n",
+        "\n",
+        "def total_amount(quantity, discount):\n",
+        "  total_amount = (quantity * reg * discount)\n",
+        "\n",
+        "def full_price(quantity, reg):\n",
+        "  full_price = (quantity * reg)\n",
+        "    \n",
+        "print('the amount of your discount is'), (total_amount)-(full_price)\n",
+        "print('your total purchase is'), total_amount\n",
+        "\n",
+        "main()\n",
+        "\n"
+      ],
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the amount of your discount is\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-25-46f23228a055>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     24\u001b[0m   \u001b[0mfull_price\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mquantity\u001b[0m \u001b[0;34m*\u001b[0m \u001b[0mreg\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     25\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 26\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'the amount of your discount is'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mtotal_amount\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m-\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfull_price\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     27\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'your total purchase is'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mtotal_amount\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     28\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: unsupported operand type(s) for -: 'function' and 'function'"
+          ]
+        }
+      ]
+    }
+  ]
+}
